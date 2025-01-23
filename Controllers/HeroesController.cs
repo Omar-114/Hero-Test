@@ -23,6 +23,7 @@ public class HeroesController : ControllerBase
         return Enumerable.Range(1, 500).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
+            Time = Time.time,
             TemperatureC = Random.Shared.Next(-20, 55),
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
